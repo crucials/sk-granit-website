@@ -22,8 +22,10 @@ document.querySelectorAll('.slider').forEach(slider => {
     }
 })
 
-const getPriceForm = document.querySelector('.get-price-form') as HTMLFormElement
-getPriceForm?.querySelector('#getPriceButton')?.addEventListener('click', () => validate(getPriceForm))
+const getPriceForm = document.querySelector('.get-price-form')
+getPriceForm?.querySelector('#getPriceButton')?.addEventListener('click', () => validate(getPriceForm as HTMLFormElement))
 
-const sendQuestionForm = document.querySelector('.send-question-form') as HTMLFormElement
-sendQuestionForm.querySelector('#sendQuestionButton')?.addEventListener('click', () => validate(sendQuestionForm))
+const sendQuestionForm = document.querySelector('.send-question-form')
+sendQuestionForm?.querySelector('#sendQuestionButton')?.addEventListener('click', () => {
+    validate(sendQuestionForm as HTMLFormElement)
+})
