@@ -1,0 +1,112 @@
+/* Header */
+@media (max-width: 380px) {
+    .header {
+        background: linear-gradient(162deg, rgba(0,0,0,0.6) 0%, rgba(0, 0, 0, 0.6) 0%), 
+            url(assets/images/headerbg.png);
+        background-size: cover;
+        background-position: 45% bottom;
+    }
+}
+
+
+/* Order call window */
+.order-call-window {
+    position: fixed;
+    left: 50%;
+    top: 100%;
+    z-index: 20;
+    display: block;
+    width: 91.666667%;
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-bg-opacity: 1;
+    background-color: rgba(26, 30, 35, var(--tw-bg-opacity));
+    padding-top: 2.5rem;
+    padding-bottom: 6rem;
+    transition: top 0.6s, transform 0.3s;
+}
+
+.order-call-window[open] {
+    top: 50%;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.order-call-window > div {
+    background-image: url(assets/images/ordercallbg.svg);
+    background-size: 40% 80%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.order-call-window-backdrop {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.4;
+}
+
+.backdrop-visible {
+    display: block;
+}
+
+@media (max-height: 620px) {
+    .order-call-window {
+        padding-top: 0.75rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+
+/* Spoiler */
+.spoiler {
+    margin-bottom: 1.25rem;
+    width: 100%;
+    border-bottom-width: 1px;
+    border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+    --tw-border-opacity: 0.2;
+    padding-bottom: 0.25rem;
+}
+
+.spoiler[open] {
+    border-width: 0px;
+}
+
+.spoiler:last-of-type {
+    margin-bottom: 3.5rem;
+}
+
+.spoiler[open] summary {
+    transition: margin-bottom 0.35s;
+    margin-bottom: 1.5rem;
+}
+
+.spoiler[open] .up-arrow {
+    display: none;
+}
+
+.spoiler[open] .down-arrow {
+    display: block;
+}
+
+
+/* Statistics section */
+.statistics {
+    background-image: url(assets/images/statisticsbg.png);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-around;
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.statistic {
+    text-align: center;
+}

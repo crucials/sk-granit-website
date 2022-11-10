@@ -1,0 +1,5 @@
+/* Merit */
+.merit {
+    width: 30%;
+    @apply pt-4 min-w-2.5; 
+}

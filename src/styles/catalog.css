@@ -1,0 +1,44 @@
+/* Search form */
+.search-form-field {
+    @apply w-[24%] min-w-2 sm:w-full;
+}
+
+.choice-box {
+    transition: border 0.3s;
+    @apply relative w-[24%] py-4 px-4 bg-zinc-700 font-normal text-gray-200 text-sm flex justify-between 
+        items-center hover:cursor-pointer min-w-2 sm:w-full;
+}
+
+.choice-box-placeholder {
+    @apply text-gray-300 opacity-30
+}
+
+.choice-box-value {
+    @apply hidden;
+}
+
+.choice-box-items {
+    background-color: #333940;
+    transition: opacity 0.26s, top 0.6s;
+    @apply pointer-events-none absolute top-0 left-0 opacity-0 w-full px-4 py-6 hover:cursor-default z-10;
+}
+
+.choice-box-opened .choice-box-items {
+    @apply pointer-events-auto top-full opacity-100 block;
+}
+
+.choice-box-opened li {
+    @apply hover:cursor-pointer;
+}
+
+.choice-box-opened img {
+    @apply rotate-180;
+}
+
+.choice-box-chosen .choice-box-placeholder {
+    @apply hidden;
+}
+
+.choice-box-chosen .choice-box-value {
+    @apply block;
+}
